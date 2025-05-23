@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Rong">
+        <meta name="description" content="Royal Bakes Bakery">
+        <meta name="keywords" content="Royal,Bakes,Bakery">
+        <link rel="icon" href="../images/iconlogo.png">
+        <link rel="stylesheet" href="../style/style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">           
+        <title>Royal Bakes Bakery</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="topbar">
+                <img src="../images/Logo.png" alt="Royal Bakes Bakery Logo" class="Logo" width="120px" height="120px">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../html/history.html">History</a></li>
+                    <li><a href="#">Ingredients</a>
+                        <ul class="dropdown">
+                            <li><a href="../html/bread.html">Breads</a></li>
+                            <li><a href="../html/cake.html">Cakes</a></li>
+                            <li><a href="../html/crossaint.html">Crossaints</a></li>
+                            <li><a href="../html/muffin.html">Muffins</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                    <li><a href="../html/feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <article class="indexarticle">
+            <h1 class="about">About</h1>
+            <p>This is a bakery website made for everyone who loves the joy of baking.</p>
+            <hr>
+            <p>From the rich history of bread to the secrets behind your favorite ingredients, we’re here to guide and inspire you. Whether you're a curious beginner or a seasoned home baker, you’ll find helpful tips, fun facts, and everything you need to make your next bake even better. Dive in, learn something new, and let your baking journey begin!</p>
+            <hr>
+            <h1 class="history">History</h1>
+            <section class="bakeryhistory">
+                <div class="breadncake">
+                    <div class="breadhistory">
+                        <img src="../images/bread.jpg" alt="bread" width="200px" height="200px">
+                        <a href="history.html#bread">Bread History</a>
+                    </div>
+                    <div class="cakehistory">
+                        <img src="../images/cake.jpg" alt="cake" width="200px" height="200px">
+                        <a href="history.html#cake">Cake History</a>
+                    </div>
+                </div>
+                <div class="crossaintnmuffin">
+                    <div class="crossainthistory">
+                        <img src="../images/croissant.jpg" alt="crossaint" witdh="200px" height="200px">
+                        <a href="history.html#crossaint">Crossaint History</a>
+                    </div>
+                    <div class="muffinhistory">
+                        <img src="../images/muffin.webp" alt="muffin" width="200px" height="200px">
+                        <a href="history.html#muffin">Muffin History</a>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+            <h1>Ingredients</h1>
+            <p>Let start your baking jourey!</p>
+            <section class="Ingredientschoice">
+                <div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                        const dropdowns = document.querySelectorAll('.has-dropdown > a');
+
+                        dropdowns.forEach(item => {
+                            item.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const parent = this.parentElement;
+
+                                parent.classList.toggle('active');
+
+                                document.querySelectorAll('.has-dropdown').forEach(el => {
+                                    if (el !== parent) el.classList.remove('active');
+                                });
+                            });
+                        });
+
+                        document.addEventListener('click', (e) => {
+                            if (!e.target.closest('.has-dropdown')) {
+                                document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('active'));
+                            }
+                        });
+                    });
+                    </script>
+                     <ul class="ingredients-list">
+                        <li class="has-dropdown">
+                            <a href="#">Breads</a>
+                            <ul class="dropdown">
+                                <li><a href="../html/bread.html#wholewheatbread">Whole Wheat Bread</a></li>
+                                <li><a href="../html/bread.html#sourdough">Sourdough</a></li>
+                                <li><a href="../html/bread.html#multigrainbread">Multigrain Bread</a></li>
+                                <li><a href="../html/bread.html#ryebread">Rye Bread</a></li>
+                                <li><a href="../html/bread.html#ciabatta">Ciabatta</a></li>
+                                <li><a href="../html/bread.html#baguette">Baguette</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Cakes</a>
+                            <ul class="dropdown">
+                                <li><a href="../html/cake.html#spongecake">Sponge Cake</a></li>
+                                <li><a href="../html/cake.html#poundcake">Pound Cake</a></li>
+                                <li><a href="../html/cake.html#fruitcake">Fruit Cake</a></li>
+                                <li><a href="../html/cake.html#carrotcake">Carrot Cake</a></li>
+                                <li><a href="../html/cake.html#chocolatecake">Chocolate Cake</a></li>
+                                <li><a href="../html/cake.html#redvelvetcake">Red Velvet Cake</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Crossaints</a>
+                            <ul class="dropdown">
+                                <li><a href="../html/crossaint.html#buttercroissant">Butter Croissant</a></li>
+                                <li><a href="../html/crossaint.html#l#almondcroissant">Almond Croissant</a></li>
+                                <li><a href="../html/crossaint.html#chocolatecroissant">Chocolate Croissant</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">Muffins</a>
+                            <ul class="dropdown">
+                                <li><a href="../html/muffin.html#blueberrymuffins">Blueberry Muffins</a></li>
+                                <li><a href="../html/muffin.html#bananamuffins">Banana Muffins</a></li>
+                                <li><a href="../html/muffin.html#chocolatemuffins">Chocolate Muffins</a></li>
+                                <li><a href="../html/muffin.html#branmuffins">Bran Muffins</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+        
+        <footer>
+            <div class="container">
+                <div class="footercontent">
+                    <h3>Contact Us</h3>
+                    <p>Email Us:<a href="mailto:mwu6676@gmail.com">mwu6676@gmail.coom</a></p>
+                    <p>Call Us:<a href="tel:+60123456789">012-3456-789</a></p>
+                    <p>Address:</p>
+                    <p>Lorong 999, Jalan Bakery,</p>
+                    <p> Kuching , Sarawak</p>
+                </div>
+                <div class="footercontent">
+                    <h3>Quick Links</h3>
+                    <ul class="list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="../html/history.html">History</a></li>
+                        <li><a href="../html/ingredients.html">Ingredients</a></li>
+                        <li><a href="../html/about.html">About Us</a></li>
+                        <li><a href="../html/feedback.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footercontent">
+                    <h3 class="socialmedialink">Follow Us</h3>
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="indexbottom-bar">
+                <p class="disclaimer">Disclaimer: This website is created for education and non-commercial use only. It is an assignment for completion of unit, DBI211 Fundamentals of Web Technology based on the Foundation (IT/Multimedia) course from Swinburne University of Technology Sarawak Campus.</p>
+                <p class="copyright">&copy; RB Bakery | Last Updated:202020202</p>
+            </div>
+        </footer>
+    </body>
+</html>
